@@ -1,0 +1,71 @@
+@import "../../variables.scss";
+
+.header {
+	width: 100%;
+	box-shadow: 0 2px 3px rgba($color: #3c3c3c, $alpha: 0.25);
+	display: flex;
+	align-items: center;
+	padding: 1rem 1rem;
+	position: sticky;
+	top: 0;
+	background-color: rgb(102, 102, 102);
+	color: whitesmoke;
+	z-index: 10;
+
+	.brandBox {
+		margin-left: 1rem;
+		.name {
+			font-weight: bold;
+			font-size: 1.5rem;
+			letter-spacing: 2px;
+		}
+		.subHeading {
+			font-size: 0.6rem;
+			margin-top: -0.3rem;
+		}
+	}
+
+	.nav {
+		display: flex;
+		padding: 0 20px;
+		justify-content: flex-end;
+		flex: 1;
+		gap: 2rem;
+		align-content: center;
+
+		.filterIconWrapper,
+		.cartIconWrapper,
+		.userIconWrapper {
+			height: 100%;
+			width: fit-content;
+			svg {
+				height: 100%;
+				width: auto;
+				font-size: 2rem;
+				cursor: pointer;
+			}
+		}
+
+		.filterIconWrapper {
+			display: none;
+
+			@media screen and (max-width: map-get($map: $breakpoint, $key: "md")) {
+				display: block;
+			}
+		}
+
+		.cartIconWrapper {
+			position: relative;
+
+			.cartNumber {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -45%);
+				font-size: 1.2rem;
+				font-weight: 700;
+				cursor: pointer;
+			}
+		}
+	}
+}
