@@ -22,20 +22,22 @@ export default function Footer() {
 
                 <div className="supportSecFoot">
                     <h1>Features</h1>
-                    <h5>Products</h5>
-                    <h5>About</h5>
-                    <h5>Store</h5>
+                    <p>Home</p>
+                    <p>Products</p>
+                    <p>About</p>
+                    <p>Store</p>
+                    <p>Contact Us</p>
                 </div>
 
                 <div className="ContactUsFoot">
                     <h2>Contact us</h2>
                     <div className="phone">
-                        <h4>Address :</h4>
-                        <h6>FC-26, Panduk Shila Marg, Zero Pusta Rd, Shastri Park, Shahdara, New Delhi, Delhi 110053</h6>
+                        <h5>Address :</h5>
+                        <p>FC-26, Panduk Shila Marg, Zero Pusta Rd, Shastri Park, Shahdara, New Delhi, Delhi 110053</p>
                     </div>
                     <div className="email">
-                        <h4>E-mail :</h4>
-                        <h6>xyzz@gmail.com</h6>
+                        <h5>E-mail :</h5>
+                        <p>xyzz@gmail.com</p>
                     </div>
                     <div className="SocialMediaHandle">
                         <img src={insta} alt="" />

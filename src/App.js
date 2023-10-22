@@ -11,6 +11,7 @@ import { updateCart } from "./store/cart"
 import { updateProducts } from "./store/products"
 import Footer from "./components/Footer"
 import LandingPage from "./components/LandingPage"
+import ContactPage from "./Pages/ContactPage"
 
 function App({ dispatch, auth, history }) {
 	// watch auth changes
@@ -134,17 +135,18 @@ function App({ dispatch, auth, history }) {
 	return (
 		<>
 			<Router>
-				<Header />
+				<Header/>
 				<Switch>
 					<Route path='/login' component={Login} />
 					<Route path='/register' component={Register} />
 					<Route path='/products/:id' component={Product} />
 					<Route path='/products' component={Products} />
 					<Route path='/checkout' component={Checkout} />
+					<Route path='/ContactPage' component={ContactPage} />
 					<Route path='/' component={LandingPage} />
 					<Route component={NotFound} />
 				</Switch>
-				<AuthBar />
+				<AuthBar/>
 				<MiniCart />
 				<Footer/>
 			</Router>

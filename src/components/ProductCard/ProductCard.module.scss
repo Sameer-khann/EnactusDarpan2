@@ -10,6 +10,8 @@
 	margin: 0.5rem 0.7rem;
 	cursor: pointer;
 	width: 300px;
+	border-radius: 10px;
+
 
 	.noImage {
 		background-color: lightgrey;
@@ -39,22 +41,29 @@
 	.contentContainer {
 		padding: 5px 10px;
 		height: 120px;
+
 		.projectName {
 			margin-top: 10px;
 			color: rgba($color: black, $alpha: 0.74);
 			font-size: 0.9rem;
 			text-transform: capitalize;
+			color: green;
+
 		}
 		.productName {
 			font-weight: bold;
 			color: rgba($color: black, $alpha: 0.74);
 			font-size: 1.3rem;
+			color: green;
+
 		}
 		.productPrice {
 			color: rgba($color: black, $alpha: 0.74);
 			font-weight: 500;
 			font-size: 1.3rem;
 			margin-top: .3rem;
+			color: green;
+
 		}
 	}
 

@@ -57,10 +57,11 @@ html {
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px;
+	height: 15vh;
 }
 
 .catageroy{
-	height: 500px;
+	height: 90vh;
 	background-color: #aaffe862;
 	padding: 20px;
 }
@@ -135,15 +136,17 @@ html {
 	font-size: 1rem;
 }
 
+/* Footer Starts */
+
 .footerSec {
 	// background-image: url(./img/foot.png);
-	background-image: linear-gradient(to right,rgba(9, 46, 32, 0.504),rgba(9, 46, 32, 0.972));
+	background-image: linear-gradient(to right,rgba(9, 46, 32, 0.972),rgba(9, 46, 32, 0.504));
 	font-size: larger;
 	color: rgb(255, 255, 255);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
-	height: 100%;
+	height: 40vh;
 	display: flex;
 	align-items: start;
 	justify-content: space-between;
@@ -171,6 +174,7 @@ html {
   
   .ContactUsFoot {
 	width: 33%;
+	height: 13%;
   }
 
   .SocialMediaHandle{
@@ -230,4 +234,462 @@ html {
 	}
   }
   
+  /* Footer Ends */
+
+  /* Review Section Starts */
+
+.review-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60vh;
+  }
   
+  .card-image {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	font-size: 15rem;
+	color: gray;
+  }
+  
+  .card-content {
+	margin-left: 1.6rem;
+	width: 24rem;
+	margin-right: 0.4rem;
+	margin-top: 2.4rem;
+  }
+  
+  .card-title {
+	font-size: 3rem;
+	font-weight: bold;
+  }
+  
+  .card-job {
+	font-size: 1.6rem;
+	color: blue;
+  }
+  
+  /* .card-text {
+	/* Add your custom styles for the card text */
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+	.review-card {
+	  flex-direction: column;
+	}
+  
+	.card-image {
+	  width: 100%;
+	  height: auto;
+	  margin: 0;
+	}
+  
+	.card-content {
+	  margin: 1.6rem 0;
+	  width: 100%;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.card-title {
+	  font-size: 2rem;
+	  text-align: center;
+	}
+  
+	.card-job {
+	  font-size: 1.2rem;
+	}
+  
+	/* Add additional responsive styles as needed */
+  }
+  
+  .review-section {
+	background: linear-gradient(to right,rgba(9, 46, 32, 0.504),rgba(9, 46,32,0.972));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .review-button {
+	// background-color: rgb(39, 29, 29);
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	padding: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+  }
+  
+  .review-button:hover {
+	background-color: rgba(82, 146, 255, 0.466);
+  }
+  
+  
+  .review-button button {
+	color: rgb(255, 255, 255);
+	font-size: 4rem;
+	border: none;
+	// background: rgb(255, 246, 246);
+	background-color: rgba(130, 26, 26, 0);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .review-button button:hover {
+	color: blueviolet;
+  }
+  
+  .review-image {
+	width: 30rem;
+	height: 30rem;
+	border-radius: 0.5rem;
+  }
+  
+  .review-content {
+	margin-left: 1.6rem;
+	width: 24rem;
+	margin-right: 0.4rem;
+	margin-top: 2.4rem;
+  }
+  
+  .review-title {
+	font-size: 3rem;
+	font-weight: bold;
+  }
+  
+  .review-job {
+	font-size: 1.6rem;
+	color: blue;
+  }
+  
+  @media only screen and (min-width: 300px) and (max-width: 600px) {
+  
+	.review-button button {
+	  font-size: 2rem;
+	  border: none;
+	  background: transparent;
+	  cursor: pointer;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+  
+	.review-button {
+	  background-color: transparent;
+	  padding: 0 20px;
+	}
+  
+	.review-button:hover {
+	  background-color: transparent;
+	  padding: 0 20px;
+	}
+  
+	/* .review-section {
+	  margin-top: 1.4rem;
+	} */
+  
+	.review-button {
+	  width: 1.5rem;
+	  height: 1.5rem;
+	}
+  
+	.review-image {
+	  width: 20rem;
+	  height: 20rem;
+	}
+  
+	.review-content {
+	  margin-left: 1rem;
+	  width: 22rem;
+	  margin-right: 0.2rem;
+	  margin-top: 1.2rem;
+	}
+  
+	.review-title {
+	  font-size: 2.5rem;
+	  text-align: center;
+	}
+  
+	.review-job {
+	  font-size: 1.4rem;
+	}
+  }
+  
+  
+  /* Review Section Ends */
+
+  /* Contact Form start */
+
+.backg {
+	height: 60vh;
+	width: 100%;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/pro.jpg);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  h4 {
+	font-size: 7rem;
+	color: #e0f6ff;
+  }
+  
+  @media (min-width:250px) and (max-width: 900px) {
+	h4 {
+	  font-size: 3rem;
+	  color: #e0f6ff;
+	}
+  }
+  
+  
+  
+  
+  
+  .formbox {
+	padding: 40px 30px;
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.243)), url(./img/pro.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+  }
+  
+  .cardd {
+	background-image: linear-gradient(to bottom, #1511117c, #1615157c),url(./img/pro.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #536976;
+	height: 87.2vh;
+	width: 400px;
+  }
+  
+  .textsaboutform {
+	padding: 20px 70px;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #e0f6ff;
+  }
+  
+  .textCARD {
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: 700;
+	color: white;
+  }
+  
+  
+  .textsec {
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+  }
+  
+  .form {
+	width: 400px;
+	padding: 20px;
+	background-color: #fefefe;
+	/* border-radius: 5px; */
+  }
+  
+  h1 {
+	text-align: center;
+  }
+  
+  label {
+	display: block;
+	margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+  }
+  
+  button.buttonCOn {
+	background-color: #536976;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	width: 100%;
+  }
+  
+  button.buttonCOn:hover {
+	background-color: #103E58;
+  }
+  
+  @media screen and (min-width: 250px) and (max-width: 900px) {
+	.form {
+	  width: 100%;
+	  padding: 40px 20px;
+	  /* max-width: 400px; */
+	  /* margin: 0 auto; */
+	}
+  
+	.textsec {
+	  height: 100%;
+	  width: 100%;
+	  align-items: center;
+	  justify-content: center;
+	  display: flex;
+	}
+	
+  
+	.formbox {
+	  padding: 20px 20px;
+	  margin: 0px 0;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  height: 100%;
+	  width: auto;
+	}
+	.cardd {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  background-color: #536976;
+	  height: auto;
+	  width: auto;
+	  padding: 50px 20px;
+	}
+  
+	.textsaboutform {
+	  padding: 20px 20px;
+	  font-weight: 400;
+	  font-size: 1rem;
+	  color: #e0f6ff;
+	}
+  }
+  
+  
+  
+  
+  .social {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+	padding: 90px 180px;
+  }
+  
+  
+  
+  .cd {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 200px ;
+	width: 200px;
+  
+  }
+  
+  .cd:hover{
+	/* box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.313); */
+	border-radius: 10%;
+  }
+  
+  .cd img {
+	width: 100px;
+	height: 100px;
+  }
+  
+  
+  
+  /* Optional styling for hover effect */
+  
+  .cd img:hover {
+	transform: scale(1.5);
+	transition: all 0.8s ease-out;
+	
+  }
+  
+  
+  
+  
+  .getText {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 4rem;
+	color: #000000c1;
+	margin: 0;
+	padding: 90px 0px 10px 0;
+  }
+  
+  
+  @media screen and (min-width: 250px) and (max-width: 900px) {
+	.social {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  padding: 50px 40px;
+	}
+  
+	.getText {
+	  text-align: center;
+	  font-size: 1.5rem;
+	  color: #000000db;
+	  margin: 0;
+	  padding: 20px 0px;
+	}
+  
+	.cd {
+	  display: flex;
+	  align-items: center;
+	  flex-direction: column;
+	  justify-content: center;
+	  height: auto ;
+	  width: auto;
+	
+	}
+  
+	.cd .cdtext{
+	  font-size: .8rem;
+	  text-align: center;
+	  text-transform: uppercase;
+	}
+  
+	.cd:hover{
+	  box-shadow: none;
+	  border-radius: 0;
+	}
+  
+  
+	.cd img {
+	  width: 70px;
+	  height: 70px;
+	}
+  }
+  
+  /*Contact Form ends*/

@@ -10,6 +10,7 @@ import { useLocation } from "react-router"
 import { updateFilter } from "../../store/filter"
 import { toggleMiniCart } from "../../store/miniCart"
 import { toggleAuthBar } from "../../store/authBar"
+import ContactPage from "../../Pages/ContactPage.js"
 import logo from "../../Assets/logo.png"
 import adgitm from "../../Assets/adgitm.png"
 
@@ -60,8 +61,15 @@ function Header({ className, cart, auth, user, filter, dispatch, miniCart, authB
 			<div className={styles.brandBox}>
 				<div className={styles.CollgelogoDiv}>
 					<div className={styles.collgeLogo}>
-						<img src={adgitm} alt="" />
+						{/* <img src={adgitm} alt="" /> */}
+						<a href="https://adgitmdelhi.ac.in/" target="_blank" rel="noreferrer">
+							<img
+								src={adgitm}
+								alt=""
+							/>
+						</a>
 					</div>
+
 					<div>
 						<Link to="/" className="Link"><p className={styles.name}>DARPAN</p></Link>
 
@@ -73,10 +81,16 @@ function Header({ className, cart, auth, user, filter, dispatch, miniCart, authB
 					<Link to="/" className="Link"><p>Home</p></Link>
 					<Link to="/products" className="Link"><p>Products</p></Link>
 					<p>About</p>
-					<p>Contact Us</p>
+					<Link to="/ContactPage" className="Link"><p>Contact Us</p></Link>
 				</div>
 				<div className={styles.logo}>
-					<img src={logo} alt="" />
+					{/* <img src={logo} alt="" /> */}
+					<a href="https://enactusadgitm.in/" target="_blank" rel="noreferrer">
+							<img
+								src={logo}
+								alt=""
+							/>
+						</a>
 				</div>
 			</div>
 
