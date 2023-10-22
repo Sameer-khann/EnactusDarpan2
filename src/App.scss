@@ -44,9 +44,100 @@ html {
 	background: rgba($color: #eee, $alpha: 0.4);
 }
 
+.Link{
+	text-decoration: none;
+	color: white;
+}
+
+
+// LandingPage
+
+.heading{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.catageroy{
+	height: 500px;
+	background-color: #aaffe862;
+	padding: 20px;
+}
+
+.catageroy h1{
+	padding: 20px 40px;
+	color: #006A4E;
+	font-size: 2.4rem;
+}
+
+.productCards{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+}
+.cards{
+	background-color: rgb(255, 255, 255);
+	height: 350px;
+	width: 260px;
+	box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 0px, rgba(255, 255, 255, 0.1) 0px 0px 8px;
+	border-radius: .6rem;
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+	flex-direction: column;
+	overflow: hidden;
+	color: green;
+	cursor: pointer;
+}
+
+.cards:hover{
+	box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
+}
+
+.CardImg {
+	height: 250px;
+	width: 100%;
+	overflow: hidden;
+	position: relative; 
+  }
+  
+  .CardImg img {
+	width: 100%;
+	transition: transform 0.6s ease; 
+  }
+  
+  .CardImg img:hover {
+	transform: scale(1.2); 
+  }
+  
+.TextCard{
+	height: 100px;
+	padding: 10px;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	gap: 2px;
+	flex-direction: column;
+}
+
+.TextCard .Name{
+	font-weight: 500;
+	font-size: 1rem;
+}
+.TextCard .title{
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+.TextCard .price{
+	font-weight: 500;
+	font-size: 1rem;
+}
+
 .footerSec {
 	// background-image: url(./img/foot.png);
-	background-color: gray;
+	background-image: linear-gradient(to right,rgba(9, 46, 32, 0.504),rgba(9, 46, 32, 0.972));
 	font-size: larger;
 	color: rgb(255, 255, 255);
 	background-repeat: no-repeat;
@@ -54,17 +145,46 @@ html {
 	background-position: top;
 	height: 100%;
 	display: flex;
-	align-items: flex-start;
+	align-items: start;
 	justify-content: space-between;
-	padding: 20px 60px;
+	padding: 40px 60px;
 	padding-bottom: 20px;
   }
+  .logoSecFoot{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 400px;
+  }
 
+  .socialMedia{
+	height: 140px;
+	width: 140px;
+	display: flex;
+	align-items: center;
+  }
 
+  .socialMedia img{
+	width: 100%;
+  }
+  
   .ContactUsFoot {
 	width: 33%;
   }
 
+  .SocialMediaHandle{
+	padding: 10px;
+	height: 50px;
+	width: 50px;
+	display: flex;
+	gap: 10px;
+  }
+
+  .SocialMediaHandle img{
+	width: 100%;
+  }
+  
   .copyright {
 	padding-top: 10px;
 	height: 100%;
@@ -75,30 +195,30 @@ html {
 	background-color: #000000;
 	color: whitesmoke;
   }
-
-
+  
+  
   @media (max-width: 600px) {
 	.footerSec {
 	  gap: 40px;
 	  flex-direction: column;
-	  align-items: flex-start;
+	  align-items: start;
 	  padding: 80px 20px;
 	}
-
+  
 	.ContactUsFoot {
 	  width: 100%;
 	}
-
+  
 	.copyright {
 	  padding-top: 20px;
 	}
-
+  
 	.Queary h1{
 	  text-align: center;
 	  font-size: 2rem;
 	  text-transform: uppercase;
 	}
-
+  
 	.CuerySEC {
 	  flex-direction: column;
 	}
@@ -109,3 +229,5 @@ html {
 	  width: 60%;
 	}
   }
+  
+  

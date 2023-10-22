@@ -10,6 +10,7 @@ import { updateUser } from "./store/user"
 import { updateCart } from "./store/cart"
 import { updateProducts } from "./store/products"
 import Footer from "./components/Footer"
+import LandingPage from "./components/LandingPage"
 
 function App({ dispatch, auth, history }) {
 	// watch auth changes
@@ -140,7 +141,7 @@ function App({ dispatch, auth, history }) {
 					<Route path='/products/:id' component={Product} />
 					<Route path='/products' component={Products} />
 					<Route path='/checkout' component={Checkout} />
-					<Route path='/' component={Home} />
+					<Route path='/' component={LandingPage} />
 					<Route component={NotFound} />
 				</Switch>
 				<AuthBar />

@@ -3,8 +3,6 @@ import { Button, FormGroup, FormInput, FormLabel } from "../../components"
 import { useEffect, useState } from "react"
 import { connect } from "react-redux"
 import firebase from "../../firebase"
-import validator from 'validator';
-
 
 function Checkout({ products }) {
 	let [deliveryCharges, updateDeliveryCharges] = useState(0)
@@ -93,91 +91,97 @@ function Checkout({ products }) {
 	}, [products])
 
 	function onSubmit(e) {
-		e.preventDefault();
-		let isInvalid = false;
-		let billingDataCopy = Object.assign({}, billingData);
+		e.preventDefault()
+		let isInvalid = false
+		let billingDataCopy = Object.assign({}, billingData)
 		const requiredFields = [
 			"firstName",
 			"lastName",
 			"email",
 			"phone",
 			"address1",
+			"phone",
 			"zip",
 			"paymentMethod",
 			"paymentScreenshot",
-		];
-	
+		]
+
 		for (const requiredField of requiredFields) {
-			const value = billingDataCopy[requiredField]["value"].trim();
-	
+			if (!(requiredField in billingDataCopy)) {
+				isInvalid = true
+				billingDataCopy[requiredField] = { value: "", valid: false }
+				continue
+			}
+			const value = billingDataCopy[requiredField]["value"].trim()
+
 			if (requiredField === "firstName" || requiredField === "lastName") {
-				if (!validator.isAlpha(value, 'en-US', {ignore: ' '})) {
-					isInvalid = true;
-					billingDataCopy[requiredField]["valid"] = false;
+				if (!/[a-zA-z\s]{1,}/.test(value)) {
+					isInvalid = true
+					billingDataCopy[requiredField]["valid"] = false
 				}
-				continue;
+				continue
 			}
-	
+
 			if (requiredField === "email") {
-				if (!validator.isEmail(value)) {
-					isInvalid = true;
-					billingDataCopy[requiredField]["valid"] = false;
+				if (
+					value.length === 0 ||
+					/^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/.test(value)
+				) {
+					isInvalid = true
+					billingDataCopy[requiredField]["valid"] = false
 				}
-				continue;
+				continue
 			}
-			
 			if (requiredField === "phone") {
-				if (
-					!validator.isMobilePhone(value, 'en-IN', {strictMode: false}) &&
-					!validator.isMobilePhone(value, 'en-US', {strictMode: false})
-				) {
-					isInvalid = true;
-					billingDataCopy[requiredField]["valid"] = false;
+				if (!/[0-9]{10}/.test(value)) {
+					isInvalid = true
+					billingDataCopy[requiredField]["valid"] = false
 				}
-				continue;
+				continue
 			}
-			
-	
+
 			if (requiredField === "address1") {
-				if (validator.isEmpty(value)) {
-					isInvalid = true;
-					billingDataCopy[requiredField]["valid"] = false;
+				if (value.length < 1) {
+					isInvalid = true
+					billingDataCopy[requiredField]["valid"] = false
 				}
-				continue;
+				continue
 			}
-			
 			if (requiredField === "zip") {
-				if (
-					!validator.isLength(value, {min: 5, max: 6}) ||
-					!validator.isNumeric(value)
-				) {
-					isInvalid = true;
-					billingDataCopy[requiredField]["valid"] = false;
+				if (!/[0-9]{6}/.test(value)) {
+					isInvalid = true
+					billingDataCopy[requiredField]["valid"] = false
 				}
-				continue;
+				continue
 			}
-	
+			if (requiredField === "state") {
+				if (!/[a-z]{1,}/.test(value)) {
+					isInvalid = true
+					billingDataCopy[requiredField]["valid"] = false
+				}
+				continue
+			}
+
 			if (requiredField === "paymentScreenshot") {
 				if (
 					billingDataCopy["paymentMethod"]["value"] === "prepaid" &&
-					deliveryCharges + codCharges + subtotal > 0 &&
-					validator.isEmpty(value)
+					deliveryCharges + codCharges + subtotal > 0
 				) {
-					billingDataCopy["paymentScreenshot"]["valid"] = false;
-					isInvalid = true;
+					if (value.length === 0) {
+						billingDataCopy["paymentScreenshot"]["valid"] = false
+						isInvalid = true
+					}
 				}
 			}
 		}
-	
-		if (isInvalid) {
-			updateBillingData(billingDataCopy);
-			return;
-		}
-	
-		updateShowConfirmationModal(true);
-	}
-	
 
+		if (isInvalid) {
+			updateBillingData(billingDataCopy)
+			return
+		}
+
+		updateShowConfirmationModal(true)
+	}
 
 	async function onSubmitConfirmation() {
 		udpateIsSubmitting(true)
