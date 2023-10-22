@@ -9,6 +9,7 @@ import { updateAuth } from "./store/auth"
 import { updateUser } from "./store/user"
 import { updateCart } from "./store/cart"
 import { updateProducts } from "./store/products"
+import Footer from "./components/Footer"
 
 function App({ dispatch, auth, history }) {
 	// watch auth changes
@@ -144,6 +145,7 @@ function App({ dispatch, auth, history }) {
 				</Switch>
 				<AuthBar />
 				<MiniCart />
+				<Footer/>
 			</Router>
 		</>
 	)
