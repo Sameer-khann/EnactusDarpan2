@@ -8,12 +8,30 @@
 	padding: 1rem 1rem;
 	position: sticky;
 	top: 0;
-	background-color: rgb(102, 102, 102);
+	background-image: linear-gradient(to right,rgba(9, 46, 32, 0.504),rgba(9, 46, 32, 0.972));
 	color: whitesmoke;
 	z-index: 10;
 
 	.brandBox {
-		margin-left: 1rem;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+
+		.CollgelogoDiv{
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.collgeLogo{
+			height: 60px;
+			width: 60px;
+		}
+
+		.collgeLogo img{
+			width: 100%;
+		}
 		.name {
 			font-weight: bold;
 			font-size: 1.5rem;
@@ -22,6 +40,24 @@
 		.subHeading {
 			font-size: 0.6rem;
 			margin-top: -0.3rem;
+		}
+		.centerHead{
+			display: flex;
+			gap: 20px;
+			width: 400px;
+			padding: 3px;
+			cursor: pointer;
+		}
+		.centerHead p:hover{
+			color: rgb(251, 255, 0);
+		}
+		.logo{
+			width: 100px;
+			height: 100%;
+		}
+
+		.logo img{
+			width: 100%;
 		}
 	}
 
@@ -68,4 +104,10 @@
 			}
 		}
 	}
+}
+
+.CenterBOX{
+	display: flex;
+	align-items: center;
+	color: red;
 }

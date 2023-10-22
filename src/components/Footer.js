@@ -1,7 +1,9 @@
 import React from 'react'
-// import insta from '..'
-// import fb from '..'
-// import tiwtter from '..'
+import logo from '../Assets/logo.png'
+import bbd from '../Assets/bbd.png'
+import adgitm from '../Assets/adgitm.png'
+import insta from '../Assets/insta.png'
+import Linkdin from '../Assets/linkdin.png'
 
 export default function Footer() {
     return (
@@ -10,11 +12,11 @@ export default function Footer() {
 
 
                 <div className="logoSecFoot">
-                    <h1>Darpan Enactus</h1>
+                    {/* <h1>Darpan Enactus</h1> */}
                     <div className="socialMedia">
-                        {/* <img src={insta} alt="" />
-                        <img src={fb} alt="" />
-                        <img src={tiwtter} alt="" /> */}
+                        <img src={logo} alt="" />
+                        <img src={bbd} alt="" />
+                        <img src={adgitm} alt="" />
                     </div>
                 </div>
 
@@ -28,12 +30,16 @@ export default function Footer() {
                 <div className="ContactUsFoot">
                     <h2>Contact us</h2>
                     <div className="phone">
-                        <h4>Phone :</h4>
-                        <h6> +91 78348 38443</h6>
+                        <h4>Address :</h4>
+                        <h6>FC-26, Panduk Shila Marg, Zero Pusta Rd, Shastri Park, Shahdara, New Delhi, Delhi 110053</h6>
                     </div>
                     <div className="email">
                         <h4>E-mail :</h4>
                         <h6>xyzz@gmail.com</h6>
+                    </div>
+                    <div className="SocialMediaHandle">
+                        <img src={insta} alt="" />
+                        <img src={Linkdin} alt="" />
                     </div>
                 </div>
 

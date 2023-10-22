@@ -137,7 +137,7 @@ html {
 
 .footerSec {
 	// background-image: url(./img/foot.png);
-	background-color: gray;
+	background-image: linear-gradient(to right,rgba(9, 46, 32, 0.504),rgba(9, 46, 32, 0.972));
 	font-size: larger;
 	color: rgb(255, 255, 255);
 	background-repeat: no-repeat;
@@ -147,13 +147,42 @@ html {
 	display: flex;
 	align-items: start;
 	justify-content: space-between;
-	padding: 20px 60px;
+	padding: 40px 60px;
 	padding-bottom: 20px;
   }
-  
+  .logoSecFoot{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 400px;
+  }
+
+  .socialMedia{
+	height: 140px;
+	width: 140px;
+	display: flex;
+	align-items: center;
+  }
+
+  .socialMedia img{
+	width: 100%;
+  }
   
   .ContactUsFoot {
 	width: 33%;
+  }
+
+  .SocialMediaHandle{
+	padding: 10px;
+	height: 50px;
+	width: 50px;
+	display: flex;
+	gap: 10px;
+  }
+
+  .SocialMediaHandle img{
+	width: 100%;
   }
   
   .copyright {

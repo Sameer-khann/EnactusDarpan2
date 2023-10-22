@@ -9,7 +9,7 @@ export default function LandingPage() {
       <div className="catageroy">
       <div className="heading">
         <h1>Abeer</h1>
-        <h4>View More--</h4>
+        <h4>View More &#8594;</h4>
         </div>
         <div className="productCards">
             <div className="cards">
@@ -63,7 +63,7 @@ export default function LandingPage() {
       <div className="catageroy">
         <div className="heading">
         <h1>Delara</h1>
-        <h4>View More--</h4>
+        <h4>View More &#8594;</h4>
         </div>
         <div className="productCards">
             <div className="cards">
@@ -117,7 +117,7 @@ export default function LandingPage() {
       <div className="catageroy">
         <div className="heading">
         <h1>Mritkala11</h1>
-        <h4>View More--</h4>
+        <h4>View More &#8594;</h4>
         </div>
         <div className="productCards">
             <div className="cards">
@@ -169,7 +169,7 @@ export default function LandingPage() {
       <div className="catageroy">
         <div className="heading">
         <h1>Panah3</h1>
-        <h4>View More--</h4>
+        <h4>View More &#8594;</h4>
         </div>
         <div className="productCards">
             <div className="cards">

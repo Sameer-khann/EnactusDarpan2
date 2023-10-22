@@ -10,6 +10,8 @@ import { useLocation } from "react-router"
 import { updateFilter } from "../../store/filter"
 import { toggleMiniCart } from "../../store/miniCart"
 import { toggleAuthBar } from "../../store/authBar"
+import logo from "../../Assets/logo.png"
+import adgitm from "../../Assets/adgitm.png"
 
 function Header({ className, cart, auth, user, filter, dispatch, miniCart, authBar, ...props }) {
 	let [cartNumber, updateCartNumber] = useState(null)
@@ -56,10 +58,28 @@ function Header({ className, cart, auth, user, filter, dispatch, miniCart, authB
 	return (
 		<header className={[styles.header, className].join(" ")} {...props}>
 			<div className={styles.brandBox}>
-				<Link  to="/" className="Link"><p className={styles.name}>DARPAN</p></Link>
+				<div className={styles.CollgelogoDiv}>
+					<div className={styles.collgeLogo}>
+						<img src={adgitm} alt="" />
+					</div>
+					<div>
+						<Link to="/" className="Link"><p className={styles.name}>DARPAN</p></Link>
 
-				<p className={styles.subHeading}>The Enactus ADGITM Store</p>
+						<p className={styles.subHeading}>The Enactus ADGITM Store</p>
+					</div>
+				</div>
+
+				<div className={styles.centerHead}>
+					<Link to="/" className="Link"><p>Home</p></Link>
+					<Link to="/products" className="Link"><p>Products</p></Link>
+					<p>About</p>
+					<p>Contact Us</p>
+				</div>
+				<div className={styles.logo}>
+					<img src={logo} alt="" />
+				</div>
 			</div>
+
 			<div className={styles.nav}>
 				{location.pathname === "/products" && (
 					<div className={styles.filterIconWrapper} onClick={toggleProductFilter}>
