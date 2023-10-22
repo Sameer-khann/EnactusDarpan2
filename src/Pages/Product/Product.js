@@ -67,20 +67,32 @@ function Product({ match, cart, auth }) {
 		document.title = `${data.name} | Darpan`
 	}, [data])
 
-	const onClickAddToCart = () => {
-		if (!data) return
+	const onClickAddToCart = async () => {
+		if (!data) return;
 		if (!auth) {
-			history.push("/login")
-			return
+			history.push("/login");
+			return;
 		}
-		const { uid } = firebase.auth().currentUser
-		const cartRef = firebase.firestore().collection("carts").doc(uid)
-
-		const { id } = data
-		if (id in cart) {
-			cartRef.update({ [id]: firebase.firestore.FieldValue.increment(1) })
+	
+		const { uid } = firebase.auth().currentUser;
+		const cartRef = firebase.firestore().collection("carts").doc(uid);
+	
+		const doc = await cartRef.get(); // Fetch the document from Firestore
+	
+		const { id } = data;
+		if (doc.exists) {
+			const cartData = doc.data(); // Get the existing data from the document
+			if (id in cartData) {
+				await cartRef.update({ [id]: firebase.firestore.FieldValue.increment(1) });
+				// console.log("in true");
+			} else {
+				await cartRef.update({ [id]: 1 });
+				// console.log("in false");
+			}
 		} else {
-			cartRef.update({ [id]: 1 })
+			// If document doesn't exist, create it with initial data
+			await cartRef.set({ [id]: 1 });
+			console.log("document created");
 		}
 	}
 
