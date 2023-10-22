@@ -43,3 +43,73 @@ html {
 	min-height: 100%;
 	background: rgba($color: #eee, $alpha: 0.4);
 }
+
+
+
+.footerSec {
+	// background-image: url(./img/foot.png);
+	background-color: gray;
+	font-size: larger;
+	color: rgb(255, 255, 255);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	height: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+	padding: 20px 60px;
+	padding-bottom: 20px;
+  }
+  
+  
+  .ContactUsFoot {
+	width: 33%;
+  }
+  
+  .copyright {
+	padding-top: 10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #000000;
+	color: whitesmoke;
+  }
+  
+  
+  @media (max-width: 600px) {
+	.footerSec {
+	  gap: 40px;
+	  flex-direction: column;
+	  align-items: start;
+	  padding: 80px 20px;
+	}
+  
+	.ContactUsFoot {
+	  width: 100%;
+	}
+  
+	.copyright {
+	  padding-top: 20px;
+	}
+  
+	.Queary h1{
+	  text-align: center;
+	  font-size: 2rem;
+	  text-transform: uppercase;
+	}
+  
+	.CuerySEC {
+	  flex-direction: column;
+	}
+	.subjectSecProL{
+	  padding: 20px;
+	}
+	.SubName{
+	  width: 60%;
+	}
+  }
+  
+  
