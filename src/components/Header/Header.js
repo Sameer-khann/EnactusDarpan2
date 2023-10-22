@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import styles from "./Header.module.scss"
 import { Icon } from "@iconify/react"
 import filterIcon from "@iconify-icons/mi/filter"
@@ -55,7 +56,8 @@ function Header({ className, cart, auth, user, filter, dispatch, miniCart, authB
 	return (
 		<header className={[styles.header, className].join(" ")} {...props}>
 			<div className={styles.brandBox}>
-				<p className={styles.name}>DARPAN</p>
+				<Link  to="/" className="Link"><p className={styles.name}>DARPAN</p></Link>
+
 				<p className={styles.subHeading}>The Enactus ADGITM Store</p>
 			</div>
 			<div className={styles.nav}>
