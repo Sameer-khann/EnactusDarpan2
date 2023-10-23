@@ -3,6 +3,7 @@ import phot from "../Assets/Coffee Mug 1 (1).png"
 import phot1 from "../Assets/ganesh wo bg 1.png"
 import ReviewSection from "../components/ReviewSection.js"
 import { Link } from "react-router-dom"
+import ContainerLanding from './ContainerLanding'
 
 
 
@@ -224,7 +225,7 @@ export default function LandingPage() {
             </div>
 
             <ReviewSection />
-
+            <ContainerLanding/>
         </>
     )
 }

@@ -140,7 +140,7 @@ html {
 
 .footerSec {
 	// background-image: url(./img/foot.png);
-	background-image: linear-gradient(to right,rgba(9, 46, 32, 0.972),rgba(9, 46, 32, 0.504));
+	background: linear-gradient(to right,rgba(9, 46, 32, 0.504),rgba(9, 46,32,0.972));
 	font-size: larger;
 	color: rgb(255, 255, 255);
 	background-repeat: no-repeat;
@@ -711,3 +711,96 @@ html {
   }
   
   /*Contact Form ends*/
+
+  /* Container landing starts*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Varela+Round&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.main{
+    display: flex;
+
+}
+
+.main_header{
+    font-size: 50px;
+	// height: 90vh;
+    font-weight: bold;
+    text-align: center;
+    animation-duration: 2s;
+    animation-name: slidedown;
+    // padding-top:40px;
+	margin-bottom: 3%;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.main_text{
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    justify-items: center;
+    animation-duration: 2s;
+    animation-name: slidein;
+    padding: 5%;
+    font-family: 'Varela Round', sans-serif;
+	color: #006A4E;
+}
+
+
+
+.main_image{
+    width: 50%;
+	padding: 7%;
+	background-color: #006A4E;
+    animation-duration: 2s;
+    animation-name: slideinleft;
+}
+
+
+
+
+
+@keyframes slidein{
+    from{
+        transform: translateX(-300px); 
+        opacity: 20%;
+        
+    }
+
+    to{
+        transform: translateX(0px); 
+        opacity: 100%;
+    }
+
+}
+
+@keyframes slidedown{
+    from{
+        transform: translateY(-50px);
+        opacity: 20%;
+    }
+    to{
+        transform: translateY(-px);
+        opacity: 100%;
+    }
+}
+
+@keyframes slideinleft{
+    from{
+        transform: translateX(300px);
+        opacity: 20%;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+  /* Container landing ends*/
