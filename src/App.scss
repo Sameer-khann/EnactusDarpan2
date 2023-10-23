@@ -469,7 +469,7 @@ html {
 	background-attachment: fixed;
   }
   
-  .cardd {
+  .imgconfrom {
 	background-image: linear-gradient(to bottom, #1511117c, #1615157c),url(./img/pro.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -479,9 +479,25 @@ html {
 	align-items: center;
 	justify-content: center;
 	background-color: #536976;
-	height: 87.2vh;
+	height: 100%;
+	padding: 20px 0;
+	// height: 87.2vh;
 	width: 400px;
   }
+//   .cardd {
+// 	background-image: linear-gradient(to bottom, #1511117c, #1615157c),url(./img/pro.jpg);
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// 	background-position: center center;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+// 	background-color: #536976;
+// 	height: 100%;
+// 	// height: 87.2vh;
+// 	width: 400px;
+//   }
   
   .textsaboutform {
 	padding: 20px 70px;
@@ -507,7 +523,9 @@ html {
   
   .form {
 	width: 400px;
-	padding: 20px;
+	padding: 22% 20px;
+	height: 100%;
+
 	background-color: #fefefe;
 	/* border-radius: 5px; */
   }

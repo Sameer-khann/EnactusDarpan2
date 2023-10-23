@@ -1,6 +1,6 @@
 import React from 'react'
-import phot from "../Assets/pic.jpg"
-import phot1 from "../Assets/pic1.jpg"
+import phot from "../Assets/Coffee Mug 1 (1).png"
+import phot1 from "../Assets/ganesh wo bg 1.png"
 import ReviewSection from "../components/ReviewSection.js"
 import { Link } from "react-router-dom"
 
