@@ -41,6 +41,7 @@
 			font-size: 0.6rem;
 			margin-top: -0.3rem;
 		}
+		
 		.centerHead{
 			display: flex;
 			gap: 20px;
@@ -52,7 +53,15 @@
 		.centerHead p:hover{
 			color: rgb(251, 255, 0);
 		}
-		.logo{
+		@media screen and (max-width: 850px) {
+			.centerHead{
+				display: none;
+			}
+		}
+		
+	}
+
+	.logo{
 			width: 100px;
 			height: 100%;
 		}
@@ -60,14 +69,13 @@
 		.logo img{
 			width: 100%;
 		}
-	}
 
 	.nav {
 		display: flex;
 		padding: 0 20px;
 		justify-content: flex-end;
 		flex: 1;
-		gap: 2rem;
+		gap: .5rem;
 		align-content: center;
 
 		.filterIconWrapper,
@@ -112,3 +120,29 @@
 	align-items: center;
 	color: red;
 }
+
+
+
+.sidebar {
+	width: 0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #333;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+  }
+  
+  .sidebar.open {
+	left: 0;
+  }
+  
+  button {
+	position: absolute;
+	top: 40px;
+	left: 100px;
+  }
+
+  

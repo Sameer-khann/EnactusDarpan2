@@ -7,9 +7,22 @@ import ContainerLanding from './ContainerLanding'
 
 
 
+
 export default function LandingPage() {
     return (
         <>
+            <div className="Nav">
+                <Link to="/" className="Link">
+                    <p>Home</p>
+                </Link>
+                <Link to="/products" className="Link">
+                    <p>Products</p>
+                </Link>
+                <p>About</p>
+                <Link to="/ContactPage" className="Link">
+                    <p>Contact Us</p>
+                </Link>
+            </div>
             <div className="catageroy">
                 <div className="heading">
                     <h1>Abeer</h1>
@@ -225,7 +238,7 @@ export default function LandingPage() {
             </div>
 
             <ReviewSection />
-            <ContainerLanding/>
+            <ContainerLanding />
         </>
     )
 }
