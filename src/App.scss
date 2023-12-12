@@ -474,7 +474,13 @@ html {
 
 /* Review Section Ends */
 
+
 /* Contact Form start */
+
+.contactPage{
+	display: flex;
+	flex-direction: column;
+}
 
 .backg {
 	height: 60vh;
@@ -535,20 +541,26 @@ h4 {
 	width: 400px;
 }
 
-//   .cardd {
-// 	background-image: linear-gradient(to bottom, #1511117c, #1615157c),url(./img/pro.jpg);
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// 	background-position: center center;
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	justify-content: center;
-// 	background-color: #536976;
-// 	height: 100%;
-// 	// height: 87.2vh;
-// 	width: 400px;
-//   }
+
+@media (max-width: 600px) {
+
+	.imgconfrom {
+		display: none;
+	}
+}
+  .cardd {
+	background-image: linear-gradient(to bottom, #1511117c, #1615157c),url(./img/pro.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #536976;
+	height: 100%;
+	width: 400px;
+  }
 
 .textsaboutform {
 	padding: 20px 70px;
@@ -566,19 +578,17 @@ h4 {
 
 
 .textsec {
-	height: 100%;
 	align-items: center;
 	justify-content: center;
 	display: flex;
+	flex-direction: column;
 }
 
 .form {
 	width: 400px;
 	padding: 22% 20px;
 	height: 100%;
-
 	background-color: #fefefe;
-	/* border-radius: 5px; */
 }
 
 h1 {
@@ -601,20 +611,28 @@ textarea {
 	margin-bottom: 20px;
 }
 
-button.buttonCOn {
+.buttonCOntact {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 	background-color: #536976;
-	color: white;
+	color: rgb(255, 255, 255);
 	padding: 10px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 	font-size: 16px;
-	width: 100%;
+	// width: 100%;
 }
 
-button.buttonCOn:hover {
+.buttonCOntact:hover {
 	background-color: #103E58;
 }
+
+
+
+
 
 @media screen and (min-width: 250px) and (max-width: 900px) {
 	.form {
@@ -856,7 +874,7 @@ button.buttonCOn:hover {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
 	.main {
 	  flex-direction: column; 
 	  align-items: center;
@@ -875,7 +893,7 @@ button.buttonCOn:hover {
   
 	.main_image {
 	  width: 100%;
-	  height: 350px;
+	  height: 550px;
 	  padding: 10px; 
 	}
 

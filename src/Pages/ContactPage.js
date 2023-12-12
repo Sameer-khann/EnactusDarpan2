@@ -85,14 +85,11 @@ export default function ContactPage() {
 
     return (
         <>
-            {/* <Navbar /> */}
             <div className="contactPage">
                 <div className="backg">
                     <h4>Contact Us</h4>
                 </div>
                 <h4 className='getText'>DARPAN</h4>
-
-
                 <div className="formbox">
                     <div className="imgconfrom">
                         <div className="cardd">
@@ -127,19 +124,18 @@ export default function ContactPage() {
                                 value={message}
                                 onChange={handleMessageChange}
                             ></textarea>
-
-                            <button className='buttonCOn' type="submit">Send</button>
+                            <div className='buttonCOntact' type="submit">Send</div>
                     
-                            <ToastContainer />
+                            {/* <ToastContainer /> */}
                             
                         </form>
                     </div>
                 </div>
 
 
-                <h4 className='getText'>social media</h4>
+                {/* <h4 className='getText'>social media</h4> */}
 
-                <div className="social">
+                {/* <div className="social">
                     <div className="cd">
                         <img src={fb} alt="" />
                         <h3 className='cdtext'>Facebook</h3>
@@ -156,7 +152,7 @@ export default function ContactPage() {
                         <img src={insta} alt="" />
                         <h3 className='cdtext'>Instagram</h3>
                     </div>
-                </div>
+                </div> */}
             </div>
             {/* <Footernew /> */}
         </>
